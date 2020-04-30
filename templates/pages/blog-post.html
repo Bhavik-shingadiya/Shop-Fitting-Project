@@ -1,0 +1,22 @@
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<div class="blog-post-panel">
+<div class="col1">
+{{> components/blog/post post=blog.post show_tags=true}}
+</div>
+<div class="col2">
+  <div class="blog-cat">
+    <h3>Categories</h3>
+    <div class='blog-sidebar-taglinks unique-tags'>
+          </div>
+          </div>
+
+          <div class="recent-post-section">
+        {{> components/cs-custom/cs-recent-post }}
+      </div>
+</div>
+</div>
+
+{{/partial}}
+{{> layout/base}}

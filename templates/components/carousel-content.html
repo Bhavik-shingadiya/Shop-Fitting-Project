@@ -1,0 +1,48 @@
+<div class="heroCarousel-content{{#unless show_background}} heroCarousel-content--empty{{/unless}} {{@index}}">
+
+    {{#if @index '==' 0}}
+        {{#if ../theme_settings.homecarouselSliderBannerIcon0}}
+        <div class="icon-img">
+            <img src="/product_images/uploaded_images/{{../../theme_settings.homecarouselSliderBannerIcon0}}" alt="">
+        </div>
+        {{/if}}
+    {{/if}}
+
+    {{#if @index '==' 1}}
+        {{#if ../theme_settings.homecarouselSliderBannerIcon1}}
+        <div class="icon-img">
+            <img src="/product_images/uploaded_images/{{../../theme_settings.homecarouselSliderBannerIcon1}}" alt="">
+        </div>
+        {{/if}}
+    {{/if}}
+
+    {{#if @index '==' 2}}
+        {{#if ../theme_settings.homecarouselSliderBannerIcon2}}
+        <div class="icon-img">
+            <img src="/product_images/uploaded_images/{{../../theme_settings.homecarouselSliderBannerIcon2}}" alt="">
+        </div>
+        {{/if}}
+    {{/if}}
+
+    {{#if @index '==' 3}}
+        {{#if ../theme_settings.homecarouselSliderBannerIcon3}}
+        <div class="icon-img">
+            <img src="/product_images/uploaded_images/{{../../theme_settings.homecarouselSliderBannerIcon3}}" alt="">
+        </div>
+        {{/if}}
+    {{/if}}
+
+    {{#if @index '==' 4}}
+        {{#if ../theme_settings.homecarouselSliderBannerIcon4}}
+        <div class="icon-img">
+            <img src="/product_images/uploaded_images/{{../../theme_settings.homecarouselSliderBannerIcon4}}" alt="">
+        </div>
+        {{/if}}
+    {{/if}}
+
+    <p class="heroCarousel-title">{{{heading}}}</p>
+    <p class="heroCarousel-description">{{{text}}}</p>
+    {{#if button_text}}
+        <span class="heroCarousel-action button button--primary button--large">{{button_text}}</span>
+    {{/if}}
+</div>

@@ -1,0 +1,38 @@
+<!-- SECOND LEVEL STARTS -->
+{{#if children}}
+<a class="has-subMenu needsclick" href="{{url}}">
+    {{name}}
+</a>
+<ul class="megamenu-submenu">
+  <li class="d-flex align-start">
+    <div class="megamenu-image-box d-flex">
+      <a href="/categories/">
+        <img src="/product_images/uploaded_images/nav-featured-img.jpg" alt="">
+      </a>
+    </div>
+    <div class="megamenu-list d-flex flex-wrap">
+      {{#each children}}
+        <!-- THIRD LEVEL STARTS -->
+        <div class="megamenu-row">
+          <p><a href="{{url}}">{{name}}</a></p>
+          {{#if children}}
+            <div class="megamenu-item-wrap d-flex align-start flex-wrap">
+              {{#each children}}
+                <!-- FORTH LEVEL STARTS -->
+                <div class="megamenu-item">
+                  <a href="{{url}}">{{name}}</a>
+                </div>
+                <!-- FORTH LEVEL ENDS -->
+              {{/each}}
+            </div>
+          {{/if}}
+        </div>
+        <!-- THIRD LEVEL ENDS -->
+      {{/each}}
+    </div>
+  </li>
+</ul>
+{{else}}
+<a href="{{url}}">{{name}}</a>
+{{/if}}
+<!-- SECOND LEVEL ENDS -->

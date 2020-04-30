@@ -1,0 +1,143 @@
+{{#if children}}
+<a class="navPages-action has-subMenu needsclick" href="{{url}}" data-collapsible1="navPages-{{id}}">
+    {{name}} <i class="icon navPages-action-moreIcon" aria-hidden="true"><svg><use xlink:href="#icon-chevron-down" /></svg></i>
+</a>
+    <ul class="navPage-subMenu-list">
+       <div class="left-panel">
+        {{#each children}}
+            <li class="navPage-subMenu-item">
+                {{#if children}}
+                    <a class="navPage-subMenu-action navPages-action has-subMenu needsclick"
+                        href="{{url}}"
+                        data-collapsible="navPages-{{id}}"
+                        data-collapsible-disabled-breakpoint="medium"
+                        data-collapsible-disabled-state="open"
+                        data-collapsible-enabled-state="closed">
+                        {{name}} <span class="fa fa-angle-right"></span>
+                    </a>
+                    <ul class="navPage-childList" id="navPages-{{id}}">
+                        {{#each children}}
+                        <li class="navPage-childList-item">
+                            {{#if children}}
+                            <a class="navPage-childList-action navPages-action needsclick" href="{{url}}">{{name}}</a>
+                            <ul class="navPage-childList" id="navPages-{{id}}">
+                                {{#each children}}
+                                <li class="navPage-childList-item">
+                                    <a class="navPage-childList-action navPages-action needsclick" href="{{url}}">{{name}}</a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                            {{else}}
+                <a class="navPage-childList-action" href="{{url}}" class="needsclick">{{name}}</a>
+              {{/if}}
+
+                        </li>
+                        {{/each}}
+                    </ul>
+                {{else}}
+                    <a class="navPage-subMenu-action navPages-action needsclick" href="{{url}}">{{name}}</a>
+                {{/if}}
+            </li>
+        {{/each}}
+</div>
+<div class="right-panel">
+        {{#if name '==' 'Display Equipment'}}
+              <li class="img-pan {{name}}">
+                <div class="img img1">
+                <a href="#">
+                  <div class="text">Best Sellers</div>
+                <img src="{{cdn 'assets/img/cs-custom/menu-best-seller-img.jpg'}}">
+
+                </a>
+                </div>
+                <div class="img img2">
+                <a href="#">
+                <img src="{{cdn 'assets/img/cs-custom/menu-new-arribal-img.jpg'}}">
+                <div class="text">New Arrivals</div>
+                </a>
+                </div>
+              </li>
+                {{/if}}
+                {{#if name '==' 'Shelving & Racking'}}
+                      <li class="img-pan {{name}}">
+                        <div class="img img1">
+                        <a href="#">
+                          <div class="text">Best Sellers</div>
+                        <img src="{{cdn 'assets/img/cs-custom/img001.jpg'}}">
+
+                        </a>
+                        </div>
+                        <div class="img img2">
+                        <a href="#">
+                        <img src="{{cdn 'assets/img/cs-custom/img002.jpg'}}">
+                        <div class="text">New Arrivals</div>
+                        </a>
+                        </div>
+                      </li>
+                        {{/if}}
+                        {{#if name '==' 'Fixtures & Fittings'}}
+                              <li class="img-pan {{name}}">
+                                <div class="img img1">
+                                <a href="#">
+                                  <div class="text">Best Sellers</div>
+                                <img src="{{cdn 'assets/img/cs-custom/menu-best-seller-img.jpg'}}">
+
+                                </a>
+                                </div>
+                                <div class="img img2">
+                                <a href="#">
+                                <img src="{{cdn 'assets/img/cs-custom/menu-new-arribal-img.jpg'}}">
+                                <div class="text">New Arrivals</div>
+                                </a>
+                                </div>
+                              </li>
+                                {{/if}}
+                                {{#if name '==' 'Display Furniture'}}
+                                      <li class="img-pan {{name}}">
+                                        <div class="img img2">
+                                        <a href="#">
+                                        <img src="{{cdn 'assets/img/cs-custom/menu-new-arribal-img.jpg'}}">
+                                        <div class="text">New Arrivals</div>
+                                        </a>
+                                        </div>
+                                      </li>
+                                        {{/if}}
+
+                        {{#if name '==' 'POS & Retail Supplies'}}
+                              <li class="img-pan {{name}}">
+                                <div class="img img1">
+                                <a href="#">
+                                  <div class="text">Best Sellers</div>
+                                <img src="{{cdn 'assets/img/cs-custom/menu-best-seller-img.jpg'}}">
+
+                                </a>
+                                </div>
+                                <div class="img img2">
+                                <a href="#">
+                                <img src="{{cdn 'assets/img/cs-custom/menu-new-arribal-img.jpg'}}">
+                                <div class="text">New Arrivals</div>
+                                </a>
+                                </div>
+                                <div class="blank-div">&nbsp;</div>
+                              </li>
+                                {{/if}}
+
+                                {{#if name '==' 'Storage Equipment'}}
+                                      <li class="img-pan {{name}}">
+
+                                        <div class="img img2">
+                                        <a href="#">
+                                        <img src="{{cdn 'assets/img/cs-custom/storage-img.jpg'}}">
+                                        <div class="text">New Arrivals</div>
+                                        </a>
+                                        </div>
+                                      </li>
+                                        {{/if}}
+
+
+</div>
+
+    </ul>
+{{else}}
+<a class="navPages-action needsclick" href="{{url}}">{{name}}</a>
+{{/if}}

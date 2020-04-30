@@ -1,0 +1,26 @@
+{{#if category}}
+  {{#if category.subcategories}}
+    <div class="sub-category-wrap clearfix">
+        <ul class="sub-category-block custom-row clearfix align-center">
+          {{#each category.subcategories}}
+          <li class="column sub-category-item clearfix">
+            <a href="{{url}}" alt="{{name}}" title="{{name}}">
+              <div class="sub-category-img-block">
+                  {{#if image}}
+                    <img src="{{getImage image 'thumbnail_size'}}" alt="" />
+                  {{else}}
+                    <img src="{{cdn ../../theme_settings.default_category_image}}" alt="No Image" title="No Image">
+                  {{/if}}
+                  <div class="short-dis">
+                  <h4>{{name}}</h4>
+                  <p>{{{ellipsis description 100}}}</p>
+                  </div>
+              </div>
+              <p class="sub-category-link">{{name}}</p>
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+    </div>
+  {{/if}}
+{{/if}}

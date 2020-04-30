@@ -1,0 +1,58 @@
+.panel-header {
+  background: $light-gray;
+  .panel-title {
+    font-weight: 300;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: $gray-color;
+  }
+}
+.panel-body{
+  background: $light-gray;
+  p{
+    padding-bottom: 15px;
+    color: $gray-color;
+  }
+  li{
+    padding-bottom: 5px;
+    color: $gray-color;
+  }
+}
+.forgot-password {
+  line-height: 50px;
+  &:hover{
+    color: $orange-color;
+  }
+}
+.login {
+  max-width: 100%;
+}
+.form-select {
+  border: 0px;
+}
+.type-createaccount_thanks {
+  .body {
+    margin-top: 30px;
+  }
+}
+.navBar--sub{
+  .navBar-item.is-active {
+    color: $orange-color;
+    border-bottom: 1px solid $orange-color;
+  }
+}
+.form-actions {
+  .button.button--primary.button--small, .button.secondary.button--small {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+}
+.type-createaccount {
+  .account--fixed {
+    .account-body {
+      @media only screen and (max-width: 1023px) {
+        margin: 0px;
+      }
+    }
+  }
+}

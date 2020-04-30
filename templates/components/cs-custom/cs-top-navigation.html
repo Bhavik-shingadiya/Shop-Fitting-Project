@@ -1,0 +1,95 @@
+<div class="main-top-navigation">
+  <div class="top-gray-panel">
+<ul>
+
+<li class="ex-vat-box active"><a href="#">Ex. VAT</a></li>
+<li class="inc-vat-box"><a href="#">Inc. VAT</a></li>
+<li class="currency-pan">
+{{> components/common/currency-selector}}
+</li>
+<li><a href="/wishlist.php">Wishlist(0)</a></li>
+<li class="navUser-item navUser-item-compare">
+          <a class="navUser-action navUser-item--compare needsclick" title="Compare" href="{{urls.compare}}" data-compare-nav>
+            <svg><use xlink:href="#icon-compare"></use></svg>
+            <span class="countPill countPill--positive"></span>
+          </a>
+      </li>
+</ul>
+  </div>
+<ul class="account-link">
+<li>
+  <a href="/contact-us"><div class="img"><svg><use xlink:href="#icon-contact-us" /></svg></div>
+  <div class="text"><h4>Contact Us</h4></a>
+    {{#if settings.phone_number}}
+  <a href="tel:{{lang 'footer.call_us' phone_number=settings.phone_number}}">{{lang 'footer.call_us' phone_number=settings.phone_number}}</a>
+     {{/if}}
+  </div>
+</li>
+<li>
+  <div class="img">
+    <a href="#"><svg><use xlink:href="#icon-account" /></svg></a>
+        <ul class="navUser-section navUser-section--alt">
+            {{#if settings.gift_certificates_enabled}}
+                <li class="navUser-item">
+                    <a class="navUser-action" href="{{urls.gift_certificate.purchase}}">{{lang 'common.gift_cert'}}</a>
+                </li>
+            {{/if}}
+
+                {{#if customer}}
+                    <li class="navUser-item navUser-item--account"><a class="navUser-action" href="{{urls.account.index}}">{{lang 'common.account'}}</a></li>
+                    <li class="navUser-item navUser-item--account"><a class="navUser-action" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a></li>
+                {{else}}
+                    <li class="navUser-item navUser-item--account"><a class="navUser-action" href="{{urls.auth.login}}">{{lang 'common.login'}}</a></li>
+                    {{#if settings.account_creation_enabled}}
+                        <li class="navUser-item navUser-item--account"> <a class="navUser-action" href="{{urls.auth.create_account}}">{{lang 'common.sign_up'}}</a></li>
+                    {{/if}}
+                {{/if}}
+
+        </ul>
+  </div>
+  <div class="text"><h4>Account</h4>
+    {{#if customer}}
+        <a class="navUser-action" href="{{urls.account.index}}">{{lang 'common.account'}}</a>
+        <span class="navUser-or">{{lang 'common.or'}}</span>
+        <a class="navUser-action" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
+    {{else}}
+        <a class="navUser-action" href="{{urls.auth.login}}">{{lang 'common.login'}}</a>
+        {{#if settings.account_creation_enabled}}
+            <span class="navUser-or">{{lang 'common.or'}}</span> <a class="navUser-action" href="{{urls.auth.create_account}}">{{lang 'common.sign_up'}}</a>
+        {{/if}}
+    {{/if}}
+  </div>
+</li>
+<li>
+  <div class="navUser-item navUser-item--cart">
+  <a
+    class="navUser-action top-link"
+    data-cart-preview
+    data-dropdown="cart-preview-dropdown"
+    data-options="align:right"
+    href="{{urls.cart}}">
+  <div class="img"><svg><use xlink:href="#icon-basket" /></svg></div>
+<div class="text">
+      <span class="navUser-item-cartLabel">{{lang 'common.cart'}}</span> (<span class="countPill cart-quantity"></span>)
+      <span class="header-subtotle">
+        {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+            <span>{{cart.sub_total.formatted}}</span>
+        {{else}}
+            {{> components/common/login-for-pricing}}
+        {{/or}}</span>
+        </div>
+  </a>
+
+  <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
+</div>
+</li>
+<!--<li class="last-panel">
+  <div class="search-btn">
+  <a class="navUser-action navUser-action--quickSearch" href="#" data-search="quickSearch" aria-controls="quickSearch" aria-expanded="false">
+    <svg><use xlink:href="#icon-search"></use></svg>
+  </a>
+  </div>
+</li>-->
+
+</ul>
+</div>

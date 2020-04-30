@@ -1,0 +1,139 @@
+
+<div class="newsletter-panel container">
+  {{#if settings.show_newsletter_box}}
+      {{> components/common/subscription-form}}
+  {{/if}}
+</div>
+  {{> components/cs-custom/cs-footer-usp}}
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        {{#if theme_settings.social_icon_placement_bottom '!==' 'bottom_none'}}
+            <article class="footer-info-col
+                footer-info-col--social
+                footer-info-col--{{#if theme_settings.social_icon_placement_bottom '===' 'bottom_left'}}left{{else}}right{{/if}}"
+                data-section-type="footer-webPages">
+                    <h5 class="footer-info-heading">{{lang 'social.connect'}}</h5>
+                    {{> components/common/social-links}}
+            </article>
+        {{/if}}
+        <section class="footer-info">
+            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
+                <h5 class="footer-info-heading">About Us</h5>
+                <ul class="footer-info-list">
+                        <li><a href="/about-us/">About Us</a></li>
+                        <li><a href="/contact-us/">Contact Us</a></li>
+                        <li><a href="#">Ask a Question</a></li>
+                        <li><a href="#">Customer Reviws</a></li>
+
+                </ul>
+            </article>
+
+            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
+                <h5 class="footer-info-heading">Resources</h5>
+                <ul class="footer-info-list">
+                        <li><a href="#">My Business</a></li>
+                        <li><a href="#">Guides and Videos</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="/blog/">Knowledgebase</a></li>
+                        <li><a href="/sitemap">Sitemap</a></li>
+
+                </ul>
+            </article>
+            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
+                <h5 class="footer-info-heading">Help & Info</h5>
+                <ul class="footer-info-list">
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Acceptable Use Policy</a></li>
+
+                </ul>
+            </article>
+            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
+                <h5 class="footer-info-heading">Ordering</h5>
+                <ul class="footer-info-list">
+                        <li><a href="#">Safe Shopping Guarantee</a></li>
+                        <li><a href="#">Returns Policy</a></li>
+                        <li><a href="#">Payment Methods</a></li>
+                        <li><a href="#">UK Delivery</a></li>
+                        <li><a href="#">European Delivery</a></li>
+
+                </ul>
+            </article>
+
+
+
+            {{#if settings.address}}
+            <article class="footer-info-col footer-info-col--small contact-panel" data-section-type="storeInfo">
+              <div class="f-top-text d-flex">
+              <div class="img"><svg><use xlink:href="#icon-contact-us" /></svg></div>
+              <div class="text">  <h5 class="footer-info-heading">{{lang 'footer.info'}}</h5>
+                {{#if settings.phone_number}}
+              <a href="tel:{{lang 'footer.call_us' phone_number=settings.phone_number}}">{{lang 'footer.call_us' phone_number=settings.phone_number}}</a>
+                 {{/if}}
+               </div>
+              </div>
+
+
+              <div class="f-trust-review">
+              <!-- start TrustBox widget -->
+            <div class="col1">
+              4.8
+          </div>
+            <div class="trustpilot-widget col2" data-locale="en-GB" data-template-id="5419b6ffb0d04a076446a9af" data-businessunit-id="4d81186200006400050f218c" data-style-height="20px" data-style-width="100%" data-theme="light">
+              <img src="https://cdn.trustpilot.net/brand-assets/1.6.0/logo-white.svg" alt="Trustpilot" class="logo__image">
+            <a href="https://uk.trustpilot.com/review/www.shopfittingwarehouse.co.uk" target="_blank" rel="noopener">
+                   <img src="//cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-5.svg" alt="5 stars: Excellent">
+            </a>
+
+          </div>
+            <!-- End TrustBox widget -->
+            </div>
+            </article>
+
+
+            {{/if}}
+
+            <article class="footer-info-col" style="display:none;">
+         <div class="footer-blog footer-info-list">
+             {{#each blog.recent_posts}}
+               <li class="navList-item">
+                   <div class="name"><a class="navList-action" href="{{url}}">{{title}}</a></div>
+               </li>
+             {{/each}}
+         </div>
+       </article>
+
+        </section>
+        <div class="footer-bottom d-flex">
+           <div class="col1"><h5 class="footer-info-heading">Contacts</h5>
+            <p>Shopfitting Warehouse by Drakes Display Ltd, 11/13 Bridge Street, Bailie Gate Industrial Estate, Sturminster Marshall, Dorset, BH21 4DB, UK </p>
+           </div>
+           <div class="col2">
+             <img src="{{cdn 'assets/img/cs-custom/sdea-logo.png'}}">
+           </div>
+           <div class="col3"><h5 class="footer-info-heading">Join Us</h5>
+            {{> components/common/social-links}}
+           </div>
+           <div class="col3"><h5 class="footer-info-heading">Payment Methods</h5>
+             <img src="{{cdn 'assets/img/cs-custom/payment-img.png'}}">
+           </div>
+        </div>
+        {{#if theme_settings.geotrust_ssl_common_name}}
+            <div class="footer-geotrust-ssl-seal">
+                {{> components/common/geotrust-ssl-seal}}
+            </div>
+        {{/if}}
+        {{#if theme_settings.show_powered_by}}
+            <div class="footer-copyright">
+                <p class="powered-by">Powered by <a href="https://www.bigcommerce.com?utm_source=merchant&amp;utm_medium=poweredbyBC" rel="nofollow">BigCommerce</a></p>
+            </div>
+        {{/if}}
+        {{#if theme_settings.show_copyright_footer}}
+            <div class="footer-copyright">
+                <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </p>
+            </div>
+        {{/if}}
+    </div>
+</footer>

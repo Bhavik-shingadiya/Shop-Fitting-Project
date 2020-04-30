@@ -1,0 +1,40 @@
+
+<header class="header apply-sticky" role="banner" id="myHeader">
+  <div class="header-sticky-section">
+     <div class="header-main container d-flex align-center">
+       <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+           <span class="mobileMenu-toggleIcon">Toggle menu</span>
+       </a>
+       <div class="top-logo">
+    {{#if page_type '===' 'default'}}
+        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+            {{> components/common/store-logo}}
+        </div>
+    {{else}}
+        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+            {{> components/common/store-logo}}
+        </div>
+
+    {{/if}}
+    </div>
+    <div class="logo-right d-flex align-center">
+    <div class="col col1">
+      <div class="dropdown-custom" id="quickSearch" aria-hidden="true" tabindex="-1" data-prevent-quick-search-close>
+          {{> components/common/quick-search}}
+      </div>
+    </div>
+    <div class="col col2">
+    {{> components/cs-custom/cs-top-navigation}}
+    </div>
+    </div>
+    </div>
+    <div class="navPages-container" id="menu" data-menu>
+        {{> components/cs-custom/cs-custom-menu}}
+
+    </div>
+  </div>
+
+</header>
+{{> components/cs-custom/cs-home-usp-banner}}
+
+{{{region name="header_bottom"}}}

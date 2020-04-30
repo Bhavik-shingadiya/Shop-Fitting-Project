@@ -1,0 +1,46 @@
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+<div class="contact-top-banner">
+<img src="{{cdn 'assets/img/cs-custom/contact-banner.jpg'}}">
+<div class="text">
+  <div class="message-icon">
+  <img src="{{cdn 'assets/img/cs-custom/message-icon.png'}}">
+  </div>
+<h2>Need any help?
+<span>We are where for you</span>
+</h2>
+</div>
+</div>
+
+<main class="page">
+    {{#unless theme_settings.hide_contact_us_page_heading }}
+        <h1 class="page-heading">Contact Form</h1>
+    {{/unless}}
+
+    {{#if page.sub_pages}}
+        <nav class="navBar navBar--sub">
+            <ul class="navBar-section account-navigation">
+                {{#each page.sub_pages}}
+                    <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                {{/each}}
+            </ul>
+        </nav>
+    {{/if}}
+
+    <div id="contact-us-page" class="page-content page-content--centered">
+        {{#if forms.contact.success}}
+            <div id="contact-us-success">{{{lang 'forms.contact_us.successful' shopPath=urls.home}}}</div>
+        {{else}}
+            <div>{{{page.content}}}</div>
+            {{> components/page/contact-us-form}}
+        {{/if}}
+
+    </div>
+
+</main>
+{{> components/cs-custom/cs-contact-details}}
+{{/partial}}
+
+{{> layout/base}}

@@ -1,0 +1,28 @@
+<div class="category-top-panel">
+  {{#lt pagination.brand.end brand.total_products }}
+  <div class="pro-show">{{brand.total_products}} Products </div>
+  {{else}}
+  {{#if pagination.brand.start}}
+  <div class="pro-show">  {{brand.total_products}} Products </div>
+  {{else}}
+  <div class="pro-show">  {{brand.total_products}} Products</div>
+  {{/if}}
+  {{/lt}}
+  <div class="cat-top-right">
+{{> components/products/filter sort=pagination.brand.sort}}
+<div class="top-pagination">
+{{> components/common/paginator pagination.brand}}
+</div>
+<div class="view-all"><a href="/categories.php">View all</a></div>
+</div>
+</div>
+
+<form action="{{urls.compare}}" method='POST' {{#if settings.data_tag_enabled}} data-list-name="Brand: {{brand.name}}" {{/if}} data-product-compare>
+    {{#if theme_settings.product_list_display_mode '===' 'grid'}}
+        {{> components/products/grid products=brand.products show_compare=brand.show_compare theme_settings=theme_settings event="list"}}
+    {{else}}
+        {{> components/products/list products=brand.products show_compare=brand.show_compare theme_settings=theme_settings event="list"}}
+    {{/if}}
+</form>
+
+{{> components/common/paginator pagination.brand}}

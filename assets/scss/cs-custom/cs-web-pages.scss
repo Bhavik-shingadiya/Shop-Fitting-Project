@@ -1,0 +1,125 @@
+.type-sitemap {
+  h1 {
+    font-weight: 300;
+    text-align: center;
+  }
+  .body {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li{
+       width: 33.33%;
+       list-style: none;
+       @media only screen and (max-width: 767px) {
+         width: 100%;
+       }
+       h3 {
+         color: $orange-color;
+         font-size: 22px;
+         text-transform: uppercase;
+         @media only screen and (max-width: 1023px) {
+           font-size: 20px;
+         }
+       }
+       li {
+         width: 100%;
+         list-style: disc;
+         line-height: 28px;
+         a{
+           text-decoration: none;
+           color: $gray-color;
+           font-size: 18px;
+           font-weight: 300;
+           @media only screen and (max-width: 1023px) {
+             font-size: 15px;
+           }
+           &:hover {
+             color: $orange-color;
+           }
+         }
+         li {
+           list-style: circle;
+           a{
+             color: $gray-dark;
+             font-size: 16px;
+             @media only screen and (max-width: 1023px) {
+               font-size: 15px;
+             }
+             &:hover {
+               color: $orange-color;
+             }
+           }
+         }
+       }
+     }
+    }
+
+  }
+}
+.body {
+  margin-top: 0px;
+}
+.type-search {
+  .panel-body {
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+  .search-top-head {
+    padding-top: 30px;
+    .page-heading {
+      margin-bottom: 10px;
+    }
+    .nav {
+      text-align: center;
+      .navBar--sub {
+        margin-bottom: 30px;
+        text-align: center;
+        .navBar-section {
+          width: auto;
+          display: inline-block;
+          li {
+            border: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.quick-links{
+      width: 100%;
+      padding:20px 0 30px;
+       .title{
+          text-transform: uppercase;
+          font-size:22px;
+          font-weight: bold;
+          color:#3d3d3d;
+          text-align: center;
+          padding-bottom:20px;
+      }
+     ul{
+          list-style:none;
+          padding:0;
+          margin:0 -5px;
+          display:flex;
+          flex-wrap:wrap;
+          li{
+              width: 20%;
+              padding:5px;
+              a{
+                  display:block;
+                  background:#3d3d3d;
+                  color:#ffffff;
+                  text-align: center;
+                  padding:10px;
+                  text-decoration: none;
+                  &:hover{
+                      background:#e7e7e7;
+                      color:#3d3d3d;
+                      
+                  }
+              }
+          }
+      }
+  }

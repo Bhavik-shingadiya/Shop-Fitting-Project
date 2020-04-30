@@ -1,0 +1,387 @@
+.card-figcaption-body {
+  .button {
+    padding: 7px 15px;
+    font-size: 12px;
+    height: 30px;
+  }
+}
+.card-title > a {
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  font-weight: 400;
+  &:hover {
+    color: $orange-color;
+  }
+}
+.card{
+  .price {
+    color:$gray-color;
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+
+.productCarousel{
+  @media only screen and (max-width: 666px) {
+    margin: 0 -20px;
+  }
+  .availability-panel {
+    display: none;
+  }
+.card-body{
+  text-align: center;
+  padding: 0 15px;
+  .card-text{
+    .price {
+      font-size: 16px;
+      font-family: 'acumin-pro', sans-serif;
+      font-weight: bold;
+      color: $orange-color;
+    }
+    .price-section {
+      display: inline-block;
+    }
+    .price--non-sale {
+      color: $gray-color;
+      font-weight: 300;
+    }
+  }
+  p.card-text {
+    display: none;
+  }
+  .card-title > a {
+    font-size: 18px;
+    font-family: 'acumin-pro', sans-serif;
+    font-weight: bold;
+    color: $gray-color;
+    display: block;
+    @media only screen and (max-width: 767px) {
+      font-size: 16px;
+      font-weight: 500;
+    }
+    @media only screen and (max-width: 374px) {
+      font-size: 14px;
+    }
+    &:hover{
+      color: $orange-color;
+    }
+  }
+}
+.productCarousel-slide {
+  padding: 15px;
+  @media only screen and (max-width: 666px) {
+    opacity: 0.5;
+  }
+  @media only screen and (max-width: 479px) {
+    padding: 10px;
+  }
+}
+.slick-slide.slick-current.slick-active.slick-center {
+  @media only screen and (max-width: 666px) {
+    opacity: 1;
+  }
+  .card {
+    .card-btn {
+      @media only screen and (max-width: 666px) {
+        opacity: 1;
+      }
+    }
+  }
+}
+}
+.productCarousel{
+  .card {
+    .card-btn {
+      opacity: 0;
+    }
+    &:hover {
+      box-shadow: 0.53px 0.848px 10px 0px rgba(122, 122, 122, 0.25);
+      .card-btn {
+        opacity: 1;
+      }
+    }
+  }
+}
+.card {
+  .card-btn {
+    .button {
+      width: 100%;
+      background: $gray-color;
+      color: $white-color;
+      border-radius: 0px;
+      border: none;
+      padding: 15px 10px;
+      font-size: 15px;
+      font-weight: 300;
+      font-family: 'acumin-pro', sans-serif;
+      line-height: 20px;
+      svg{
+        width: 20px;
+        height: 18px;
+        fill:$white-color;
+        margin-right: 10px;
+        position: relative;
+        top:2px;
+      }
+      &:hover {
+        background: $orange-color;
+      }
+    }
+  }
+}
+.productCarousel-slide {
+  .card-body {
+    text-align: center;
+  }
+}
+.page-sidebar + .page-content, .suggestiveCart {
+  .productGrid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .product {
+      width: 25%;
+      display: flex;
+      padding: 0;
+      @media only screen and (max-width: 1179px) {
+        width: 33.33%;
+      }
+      @media only screen and (max-width: 666px) {
+        width: 50%;
+      }
+      @media only screen and (max-width: 413px) {
+        width: 50%;
+      }
+      .card{
+        padding: 0px 0.75rem  0.75rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .card-btn {
+         opacity: 1;
+       }
+       &:hover {
+         box-shadow: none;
+       }
+      }
+
+      .card-body{
+        text-align: left;
+        padding: 23px 0 0 0;
+        flex:1 0 auto;
+        position: relative;
+        .card-review{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .card-text {
+          padding: 0px 0;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          .price-section {
+            text-align: left;
+            width: 100%;
+            .price-label {
+              color: $green-color;
+              font-weight: bold;
+            }
+            .price {
+              color:$gray-color;
+              font-size: 13px;
+            }
+            .price.New {
+              color:$gray-color;
+              font-size: 13px;
+
+            }
+            .price-now-label {
+              color: $orange-color;
+              font-size: 13px;
+              font-weight: bold;
+              line-height: 15px;
+              display: block;
+              text-align: left;
+            }
+            .price {
+              color: $orange-color;
+              font-size: 13px;
+              font-weight: bold;
+              line-height: 15px;
+              display: block;
+              text-align: left;
+            }
+          }
+          .non-sale-price--withoutTax {
+            text-align: left;
+            font-size: 13px;
+            color: $gray-color;
+            line-height: 15px;
+            .price--non-sale {
+              font-size: 13px;
+              color: $gray-color;
+              line-height: 15px;
+              text-align: left;
+              display: block;
+              font-weight: normal;
+            }
+          }
+        }
+        .card-title > a {
+          font-size: 13px;
+          line-height: 18px;
+          display: flex;
+          font-weight: 500;
+          &:hover {
+            color: $orange-color;
+          }
+        }
+        p.card-summary{
+            font-size: 11px;
+            color: #494949;
+        }
+      }
+    }
+  }
+}
+.card-figcaption-button + .card-figcaption-button {
+  input[type="checkbox"] {
+    position: relative;
+    top:3px;
+  }
+}
+.productCarousel {
+  .price-section{
+    .price-label {
+      display: none;
+    }
+  }
+  .price-now-label {
+    display: none;
+  }
+}
+.availability-panel {
+  background: $color-gray;
+  padding: 1px 1px 1px 10px;
+  font-size: 13px;
+  color: $green-light;
+  font-weight: 300;
+  margin-bottom: 5px;
+  line-height: 14px;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  @media only screen and (max-width: 479px) {
+    font-size: 11px;
+  }
+  .productView-info-value {
+    margin: 0;
+    padding-right: 10px;
+  }
+  .qty-box {
+    width: 46px;
+    background: $white-color;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    #qty {
+      width: 46px;
+      padding: 5px;
+      text-align: center;
+      border: 0px;
+    }
+  }
+}
+.product:hover{
+  .sale-flag-side {
+    background: none;
+  }
+}
+.card {
+  position: relative;
+}
+.sale-flag-side {
+  left: auto;
+  right: 10px;
+  top:10px;
+  width: 30px;
+  height: 30px;
+  background: none;
+  padding: 0px;
+  border-radius: none;
+  .sale-text {
+    width: 30px;
+    height: 30px;
+    svg {
+      width: 30px;
+      height: 30px;
+      fill:$orange-color;
+    }
+  }
+
+
+}
+.productCarousel , .productCarousel .slick-prev {
+  .slick-next {
+    @media only screen and (max-width: 1350px) {
+      right: 0;
+    }
+  }
+  .slick-prev {
+    @media only screen and (max-width: 1350px) {
+      left:0px;
+    }
+  }
+
+
+}
+
+.productCarousel .card-body .card-text .price-section.pirce-withtax-box, .card-body .card-text .price-section.pirce-withtax-box, .productView-price .price-section.pirce-withtax-box {
+    display: none;
+}
+
+.top-gray-panel ul li.active a {
+  color: $orange-color;
+  &:before {
+    background: $orange-color;
+  }
+}
+.price-section--withoutTax.non-sale-price--withoutTax.price-section--minor {
+  display: none;
+}
+.page-sidebar + .page-content .productGrid .product .card-body .card-text, .suggestiveCart .productGrid .product .card-body .card-text  {
+  .non-sale-price--withTax {
+    text-align: left;
+    color: $gray-color;
+    .price--non-sale {
+      text-align: left;
+      font-weight: normal;
+      color: $gray-color;
+    }
+  }
+
+}
+.productView-price abbr {
+  text-decoration: none;
+  color: $gray-color;
+  font-size: 16px;
+}
+.priceSpecification {
+  display: inline-block;
+  width: auto;
+}
+
+
+.card-text abbr {
+  /*display: none;*/
+  font-size: 12px;
+  text-decoration: none;
+}
+.availability-panel .qty-box #qty{
+    min-height:38px;
+}

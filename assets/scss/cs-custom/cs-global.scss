@@ -1,0 +1,159 @@
+body {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-stroke-width: auto;
+  -moz-osx-font-smoothing: auto;
+  padding: 0;
+  font-family: $body-font;
+  font-size: 16px;
+  color: $black-color;
+  font-weight: 400;
+  @media screen and (min-width: 1440px) {
+    font-size: get-vw(32px);
+  }
+}
+
+*{ outline: none !important; }
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"],
+input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"],
+input[type="time"], input[type="url"], input[type="color"], textarea{ outline: none; }
+
+&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $pink-color;
+  opacity: 1; /* Firefox */
+}
+
+&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $pink-color;
+  opacity: 1;
+}
+
+&::-ms-input-placeholder { /* Microsoft Edge */
+  color: $pink-color;
+  opacity: 1;
+}
+
+
+select{ outline: none; }
+
+h1, h2, h3, h4, h5 {
+  font-family: $body-font;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: $gray-color;
+  @media only screen and (max-width: 1023px) {
+    font-size: 35px;
+
+  }
+  @media only screen and (max-width: 767px) {
+    font-size: 30px;
+    margin-bottom: 20px !important;
+  }
+  @media only screen and (max-width: 479px) {
+    font-size: 25px;
+    margin-bottom: 10px !important;
+  }
+}
+.form-input{
+  background: $light-gray;
+  border-radius: 0;
+  border: 0;
+  height: 50px;
+  padding: 10px 15px;
+  font-size: 15px;
+  color: $gray-color;
+}
+.form-select {
+  height: 50px;
+  padding: 10px 15px;
+  font-size: 15px;
+  color: $gray-color;
+  border-radius: 0;
+  background-color: $light-gray;
+  padding: 10px 25px 10px 10px;
+}
+.form-label {
+  font-size: 16px;
+  color: $gray-color;
+  @media only screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+.form-field--error .form-field-error, .form-field--error .form-inlineMessage {
+  font-size: 12px;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1240px;
+  @media only screen and (max-width: 1279px) {
+    max-width: 1140px;
+  }
+  @media only screen and (max-width: 1179px) {
+    max-width: 990px;
+  }
+  @media only screen and (max-width: 1023px) {
+    max-width: 740px;
+  }
+  @media only screen and (max-width: 767px) {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .container {
+    @media only screen and (max-width: 767px) {
+      padding: 0px;
+    }
+  }
+}
+
+.navPages {
+  width: 100%;
+  max-width: 1240px;
+  @media only screen and (max-width: 1279px) {
+    max-width: 1140px;
+  }
+  @media only screen and (max-width: 1179px) {
+    max-width: 990px;
+  }
+  @media only screen and (max-width: 1023px) {
+    max-width: 740px;
+  }
+
+}
+
+//====== display flex style ======//
+.d-flex{
+  @include display-flex(flex);
+}
+.align-center{
+  @include align-item(center);
+}
+.align-start{
+  @include align-item(flex-start);
+}
+.align-end{
+  @include align-item(flex-end);
+}
+.justify-start{
+  @include justify-content(flex-start);
+}
+.justify-center{
+  @include justify-content(center);
+}
+.justify-end{
+  @include justify-content(flex-end);
+}
+.justify-sb{
+  @include justify-content(space-between);
+}
+.flex-wrap-w{
+  @include flex-wrap(wrap);
+}
+.flex-wrap-nw{
+  @include flex-wrap(nowrap);
+}

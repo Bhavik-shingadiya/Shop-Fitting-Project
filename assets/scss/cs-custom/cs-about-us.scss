@@ -1,0 +1,106 @@
+.type-page.About.Us {
+  .body {
+    padding-top: 30px;
+    h1.page-heading {
+      display: none;
+    }
+    .contact-map-panel {
+      margin: 0 -20px;
+      @media only screen and (max-width: 1300px) {
+        margin: 0px;
+      }
+    }
+    .about-us-page {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+      padding-bottom: 60px;
+      .col + .col {
+        @media only screen and (max-width: 1023px) {
+          padding-top: 30px;
+        }
+      }
+      .col {
+        width: 50%;
+        padding: 0 15px;
+        @media only screen and (max-width: 1023px) {
+          width: 100%;
+        }
+
+        .btn-panel {
+          margin-bottom: 20px;
+        }
+        .button {
+          font-size: 18px;
+          background: $gray-color;
+          padding: 15px 30px;
+          color: $white-color;
+          @media only screen and (max-width: 479px) {
+            font-size: 16px;
+          }
+          &:hover {
+            background: $orange-color;
+            color: $white-color;
+          }
+        }
+        p{
+          // font-family: 'Roboto Slab', serif;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 28px;
+          margin-bottom: 30px;
+          color: $gray-color;
+          @media only screen and (max-width: 479px) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          li{
+            background: url(../img/bullet-icon.png) no-repeat left 7px;
+            padding: 7px 0 7px 35px;
+            a{
+              font-size: 18px;
+              color: $orange-color;
+              text-decoration: none;
+              @media only screen and (max-width: 479px) {
+                font-size: 16px;
+              }
+              &:hover {
+                color: $gray-color;
+              }
+            }
+          }
+        }
+      }
+      h2 {
+        font-size: 22px;
+        margin: 0px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $orange-color;
+      }
+    }
+  }
+}
+.orange-btn {
+  background: $orange-color;
+  display: inline-block;
+  padding: 13px 20px;
+  color: $white-color;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  line-height: 18px;
+  @media only screen and (max-width: 479px) {
+    font-size: 14px;
+  }
+  span {
+    display: block;
+    font-weight: 300;
+  }
+}

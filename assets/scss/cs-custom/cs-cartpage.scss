@@ -1,0 +1,88 @@
+.form-increment {
+  border: 1px solid $orange-color;
+  display: inline-block;
+  .form-input {
+    height: 35px;
+    background: $white-color;
+    padding: 10px 5px;
+  }
+  .button.button--icon {
+    padding: 8px;
+    .icon {
+      height: 20px;
+      width: 20px;
+      svg {
+        fill:$white-color;
+      }
+    }
+  }
+}
+
+.cart-item-name {
+  line-height: 18px;
+  a{
+    text-decoration: none;
+    color: $gray-color;
+    font-size: 16px;
+  }
+}
+.cart-header-item {
+  font-size: 18px;
+  color: $gray-color;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.cart-total-label, .cart-total-value {
+  color: $gray-color;
+  font-size: 16px;
+  font-weight: normal;
+  @media only screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+  @media only screen and (max-width: 479px) {
+    font-size: 12px;
+  }
+}
+.cart-total-label {
+  @media only screen and (max-width: 479px) {
+    padding-left: 0px;
+  }
+}
+.coupon-code-add, .coupon-code-cancel, .shipping-estimate-show, .shipping-estimate-hide, .gift-certificate-add, .gift-certificate-cancel {
+  color: $orange-color;
+  text-decoration: none;
+}
+.estimator-form-input .form-input, .estimator-form-input .form-select {
+  height: 50px;
+}
+.estimator-form-label .form-label {
+  line-height: 50px;
+}
+.coupon-form .form-input, .cart-gift-certificate-form .form-input {
+  height: 50px;
+  padding: 10px 20px;
+}
+.type-cart {
+  .body {
+    margin-top: 0px;
+  }
+}
+.cart-item-name + .definitionList {
+  font-size: 12px;
+  .definitionList-value {
+    color: $gray-dark;
+  }
+}
+.definitionList + a {
+  color: $orange-color;
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: none;
+  &:hover {
+    color: $gray-color;
+    text-decoration: underline;
+  }
+}
+.cart-item-info + .cart-item-info {
+  margin-top: 0px;
+}

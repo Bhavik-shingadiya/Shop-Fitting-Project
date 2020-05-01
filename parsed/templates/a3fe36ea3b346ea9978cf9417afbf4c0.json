@@ -1,1 +1,0 @@
-{"components/cs-custom/cs-recent-post":"<div class=\"blog-cat\">\r\n    <h3>Recent Post</h3>\r\n    <ul class=\"blog-sidebar custom-recent-posts navList\">\r\n      <div class=\"loadingOverlay\" style=\"width:100%; height:100px;margin:40px 0;display:block;\"></div>\r\n    </ul>\r\n</div>\r\n"}
